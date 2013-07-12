@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Familysearch Management Tool - Evaluate</title>
+    <style>
+        div.centered {
+            text-align: center;
+        }
+        div.centered table {
+            font-weight: bold;
+            font-size: 18px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        span.bold {
+            font-weight: bold;
+        }
+    </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="../css/evalMenu.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="../css/navigation.css" type="text/css" media="screen">
+</head>
+<body>
+    <h1>Family History Management Tool - Employee Evaluation</h1>
+    <ul id='menu'>
+        <li><a href='/index.php'>Home</a></li>
+        <li><a href="../help/index.html">Help</a></li>
+    </ul>
+
+    <a name="top"></a>
+    <h2>Summary of Features</h2>
+
+    <p>The Employee Evaluation page is used to record your rating of the employees on your team. Each employee is rated on individual competencies and completion of goals.
+        Using the formula from the chart on the home page and your input on this page, the system records an overall competency score and a final result score from each employee.
+        These scores are composed from individual competency ratings and goal completion which are entered in the text-boxes shown on the page.</p>
+
+    <h3><a name="nav">Navigation and Filtering Features</a></h3>
+    <p>The top bar on the page - shown in the image below - contains a number of navigation and filtering features.  A group-manager can use the filtering features to see all of
+        her direct reports, managers, and those who report to those managers on the same page, or she can filter down to just those who directly report to her. A front-line manager
+        can choose to see all of the roles and grades in his organization, or he can filter down to a single role and a single grade in his organization.  An explanation of these
+        capabilities follows.
+    </p>
+    <div class="centered">
+    <table>
+        <tr><td colspan="4"><img src="../images/Filter%20Bar%20with%20Braces.png"></td></tr>
+        <tr>
+            <td><a href="#breadcrumb">Breadcrumb</a></td>
+            <td><a href="#mgrvis">Manager Visibility Filter</a></td>
+            <td><a href="#grdvis">Grade Visibility Filter</a></td>
+            <td><a href="#rlvis">Role Visibility Filter</a></td>
+        </tr>
+    </table>
+    </div>
+
+    <h4><a name="breadcrumb">Breadcrumb</a></h4>
+    <p>The breadcrumb shows the current selected manager, the number of employees currently shown on the page, presents a link to go back to the home screen, and to select another manager.
+        In the image above, the bread crumb has 'Home' and 'Travis Jones - 5' buttons.  When selected, the home button immediately takes the user back to the home screen.  The 'Travis Jones - 5' button
+        presents the currently selected manager and also indicates how many employees are shown on the current page.  Selecting filtering options, which are explained in the following sections, will modify
+        the number of employees shown and therefore the number displayed on this button.  Selecting this button will take the user back to the manager selection page which allows a group manager to choose
+        among his managers.  For front-line managers, the previous page only allows him to select himself.
+    </p>
+
+    <h4><a name="mgrvis">Manager Visibility Filter</a></h4>
+    <p>
+        The Manager Visibility Filter allows a manager to select between presenting all of his employees on the page including managers and direct reports and options to focus in on one of those groups. The
+        currently selected filter is indicated by an asterisk on the selected tab.
+        <ul>
+            <li><span class="bold">D</span> - Allows the manager to see just his direct reports.  For group managers, this would exclude any employees that report to managers in his organization.  For front-line managers,
+                clicking this will have no effect.</li>
+            <li><span class="bold">M</span> - Allows a manager to see just those managers that report to him and excludes any other direct reports.  For group managers, this filter allows them to see only the managers
+                that report to them and would exclude roles like Group Architects or Principle Engineers that directly report to him.  For front-line managers, selecting this filter will show an empty list as no
+                other managers report to them.</li>
+            <li><span class="bold">-M</span> - Allows a manager to see just those directs who are not managers themselves.  For group managers, applying this filter allows them to see just the Architects and Principle Engineers
+                who are not people managers.  For front-line managers, applying this filter has no effect.</li>
+            <li><span class="bold">+M</span> - Enables a manager to see all of the employees that report to him and those who report to managers in his organization.  This is the default Manager Visibility Filter and
+                is set by default upon initial view of this page.</li>
+        </ul>
+    </p>
+
+    <h4><a name="grdvis">Grade Visibility Filter</a></h4>
+    <p>
+        All of the appropriate engineering grades from 88-99 are listed which allow a manager to filter the employee table to just those employees in a specific grade.  The <span class="bold">All</span> filter is the default
+        filter and allows a manager to show all of the grades at the same time.
+    </p>
+
+    <h4><a name="rlvis">Role Visibility Filter</a></h4>
+    <p>
+        This filter acts as a toggle and shows either all of the possible roles at once or shows just those employees with a specific role delineated in the following list:
+        <ul>
+            <li><span class="bold">All</span> - Shows all of the roles at once.  This is the default filter and is set by default upon initial view of the page.</li>
+            <li><span class="bold">SD</span> - Software Developer role.</li>
+            <li><span class="bold">WD</span> - Web Developer role.</li>
+            <li><span class="bold">UX</span> - User Experience role.</li>
+            <li><span class="bold">QA</span> - Quality Assurance role.</li>
+            <li><span class="bold">AU</span> - Authorities role.</li>
+            <li><span class="bold">PG</span> - Program Management role.</li>
+        </ul>
+    </p>
+
+    <h3>The Employees table</h3>
+    <p>
+        The Employees table shows all of a managers direct reports according to the selected filters as outlined above. The table is used to record the manager's evaluation of each employee in specific competency categories
+        goal fields.  The operation of the header and fields is discussed in the following section.
+    </p>
+    <div class="centered"><img src="../images/Employee%20Table%20Header.png"></div>
+    <p>
+        All of the column headings are selectable and change the sort order when selected.  Sorts are always
+        applied first in an ascending fashion and, if selected again, in a descending fashion.  Some of the columns of the table are not user-modifiable like Employee ID or Name. Some columns are user-modifiable and are used
+        to record a manager's evaluation of the employee in that competency or to provide an evaluation of how well the employee did regarding their goals.  The columns that are user-modifiable are those that use text-boxes
+        and will allow the user insert a blinking caret by selecting the box.  Those columns that have non-user-modifiable data will not allow the user to select them.  Two of the columns, <span class="bold">Comp Score</span>
+        and <span class="bold">Result Score</span>, are calculated fields that use the data input by the manager and a simple algorithm to calculate their contents.  Changing the user-modifiable columns will change the values
+        contained in those columns.
+    </p>
+</body>
+</html>

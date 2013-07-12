@@ -1,0 +1,46 @@
+/* 
+    Document   : table
+    Created on : Apr 23, 2013, 3:33:08 PM
+    Author     : weitzeilsl
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+caption {
+    text-align: left;
+    margin: 0 0 .5em 0;
+    font-weight: bold; }
+table {
+    border-collapse: collapse;
+    font-family: Arial;
+    float: left;
+}
+th, td {
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff; }
+tr {
+    background: #B0C4D7; }
+thead th {
+    background:#036;
+    color: #fff; 
+}
+thead th a:visited {
+    background:#036;
+    color: #fff; 
+}
+thead th a:link {
+    background:#036;
+    color: #fff; 
+}
+thead th a:active {
+    background:#036;
+    color: #fff; 
+}
+tbody th {
+    font-weight: normal;
+    background: #658CB1; }
+tr:nth-child(odd) {
+    background: #D7E0EA; }
+
+tr:nth-child(even) {
+    background: #8AA9C7; }

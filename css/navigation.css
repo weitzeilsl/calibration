@@ -1,0 +1,36 @@
+/* 
+    Document   : navigation
+    Created on : Apr 23, 2013, 9:25:44 AM
+    Author     : weitzeilsl
+    Description:
+        Defines the left side navigation bar.
+*/
+
+ul#navigation { 
+    margin-left: 0;
+    padding-left: 0;
+    list-style-type: none;
+}
+ul#navigation a {
+    display: block;
+    text-decoration: none;
+    background: #666666;
+    color: #fff;
+    padding: .2em .5em;
+    border-bottom: 1px solid #fff;
+    width: 9em;
+    font-family: Arial;
+}
+ul#navigation a:hover {
+    background: #E6E6E6;
+    color: #000;
+}
+ul#navigation li {
+    display: inline;
+}
+head {
+    font-family: Arial;
+}
+body {
+    font-family: Arial;
+}

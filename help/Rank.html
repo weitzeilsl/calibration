@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Familysearch Management Tool - Rank</title>
+    <style>
+        div.centered {
+            text-align: center;
+        }
+        div.centered table {
+            font-weight: bold;
+            font-size: 18px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        span.bold {
+            font-weight: bold;
+        }
+    </style>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="../css/evalMenu.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="../css/navigation.css" type="text/css" media="screen">
+</head>
+<body>
+    <h1>Family History Management Tool - Employee Rank</h1>
+    <ul id='menu'>
+        <li><a href='/index.php'>Home</a></li>
+        <li><a href="../help/index.html">Help</a></li>
+    </ul>
+
+    <a name="top"></a>
+    <h2>Summary of Features</h2>
+    <p>
+        The Employee Rank page records a manager's stack-rank of his team.  The page initially shows all of the employees that are in the manager's organization, however the ranking should apply only to a
+        specific grade and role. For example, a level 93 SD engineer should not be stack ranked with either level 98 SD engineers or level 93 Program Managers - he should only be stack ranked with SD Engineers
+        in the level 93 grade. The filtering capabilities of the navigation bar allow a manager to select a specific grade and role to perform the ranking. For a deeper discussion of the navigation bar,
+        see the <a href="Evaluate.html#nav">Evaluate</a> page. Given a cursory inspection of the page, you'll notice that there are no 'save' or 'submit' buttons shown.  That is by design as the system records
+        the manager's entries as soon as the manager leaves the current entry box and moves to another. This may come as a surprise to the user when they are finished and expecting to click a button to indicate
+        their readiness to move on, but rest assured that the values entered will be recorded and one can simply close the browser window as soon as they are finished.
+    </p>
+
+    <h3>The Employees Table</h3>
+
+    <h4>Table Header</h4>
+    <div class="centered"><img src="../images/Employee%20Rank%20Table%20Header.png" /></div>
+    <p>
+        The columns in the Employees table can be sorted by clicking any one of the column headers. The first click on the header column will sort the table by that column in a descending fashion. As an example,
+        if the column you're selecting was First Name, on the first click, the sort would display names from Z-A.  On the second click, the sort order will be in an ascending fashion.
+    </p>
+
+    <h4>Ranking Area</h4>
+    <div class="centered"><img src="../images/Employee%20Ranking.png" /></div>
+    <p>
+        The manager records a stack ranking of his employees using the ranking area of the employees table shown in the image above.  You'll notice that the employees displayed have been filtered to show just
+        the level 97 employees (the information shown is sample data and not accurate).  The manager simply stack ranks all of the employees listed in each of the competencies represented by the columns.  Ranking
+        values range from a minimum of 1 to a maximum of 5.  If a user enters unsupported values, the system automatically changes the entered value to a default value; in this case, a 3. The Rank column on the far
+        right is a calculated column and is not directly editable, however it is a running average of the values entered by the manager in the rest of the ranking area.
+    </p>
+
+    <h4>Distribution Area</h4>
+    <div class="centered"><img src="../images/Employee%20Rank%20Distribution.png" /></div>
+    <p>
+        The distribution area shown in the image above is used to guide the manager in the ranking process.  The Distribution column indicates the possible ranking values.  The Target column indicates how many
+        of the possible values should be entered in each column.  The remaining columns represent each of the competency columns and display how many of each possible ranking value have been entered.
+    </p>
+    <p>
+        As an example, the image above shows that the target for this group of engineers is for the manager to enter a single ranking of 5, a single ranking of 4, 2 rankings of 3 and a single ranking of 2.  No
+        rankings of 1 should be entered.  Following this target ensures that the overall ranking for this group will average out correctly for the entire process. Continuing with the example, you'll notice that
+        the Leadership column in the image above has the number zero for all possible values except for the possible value 3.  That value has a 5 in the Leadership column which indicates that all 5 of the
+        employees have been ranked as a three in the Leadership column.  This is an invalid ranking and needs to be fixed before continuing.
+    </p>
+    <p>
+        The Communication column values matches the Target column values for each of the distribution rows.  This indicates that the manager has assigned a single engineer the 5 value, a different engineer the 4 value,
+        another couple of engineers the 3 value, and one of the engineers a 2 value.  Because the Communication column values matches the Target column values, this is a valid ranking for the competency and the manager
+        has completed the ranking for this competency.
+    </p>
+    <p>
+        Once all of the distribution competency columns match the Target column, the manager is complete with the ranking task and may go back to the Evaluate tab or is free to close his browser window if he has already
+        completed the evaluation of his employees.
+    </p>
+
+
+<p>A manager uses this worksheet to determine the stack rank for the employees at level 98 within his or her team.
+    The manager should fill out the Eval tab before filling out the Rank tab. The employee's name, manager  and employee
+    id are carried over from the Eval tab. The main table (D4:L16) requires the manager to enter the values 1-5 in columns D - L.
+    As the manager enters the values, the distribution table on rows 19 - 23 shows the percentage of cells containing each value.
+    The manager is asked to distribute the values to meet the target values in column C as closely as possible.  As values are entered,
+    an average Rank score is calculated.  The manager should award the number of values that equates to an average of exactly
+    3.00 points.   This forces consistency across teams and means that for every 5 competency awarded  in a column, there must be at
+    least two 2's or one 1 awarded to others. Using the pop down controls on D2:L2, the manager may sort the list for each competency.
+    This provides the manager the ability to evaluate the team  members side-by-side for each competency.</p>
+<p>The purpose of this exercise is to determine a team ranking and salary comparison against their team members of the same
+    level.  This information is helpful when considering salary increases. The rank value and order is not communicated to the
+    employee.  Those ranked at the bottom should be considered as candidates for performance improvement plans.  Those ranked
+    the highest are potential candidates for recognition and promotion.  Those being considered for promotion should rank in the
+    upper half of their new peers in their target grade.</p>
+<a href="#top">Help Home</a><br>
+
+</body>
+</html>
