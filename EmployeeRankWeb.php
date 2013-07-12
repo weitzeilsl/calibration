@@ -711,7 +711,7 @@
                 if(isset($_REQUEST['r'])){$currentRole = $_REQUEST['r'];}
                 if(isset($_REQUEST['s'])){$sortBy = $_REQUEST['s'];} else {$sortBy = 'lastName';}                
                 
-                //Get manager information
+                //Get manager information 
                 if(!class_exists('ManagerData')) {
                     include 'ManagerData.php';
                 }
